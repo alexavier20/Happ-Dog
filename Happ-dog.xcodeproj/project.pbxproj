@@ -1,0 +1,901 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E27075D79FC2A23738D0EB7 /* Pods_Happ_dogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51632CE24E3841D4B91D8911 /* Pods_Happ_dogTests.framework */; };
+		5624704181EC820F274E7481 /* Pods_Happ_dog_Happ_dogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7402B7F15764C06DD34F71C8 /* Pods_Happ_dog_Happ_dogUITests.framework */; };
+		FA0D84A026B490A400A1D8C4 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D849F26B490A300A1D8C4 /* Swipeable.swift */; };
+		FA0FE54B26CD623A00CCB956 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0FE54A26CD623A00CCB956 /* Default-568h@2x.png */; };
+		FA112C1126B1D63F00F698C1 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1026B1D63F00F698C1 /* UIImageView.swift */; };
+		FA112C1426B1D7A300F698C1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1326B1D7A300F698C1 /* APIError.swift */; };
+		FA112C1626B1D88600F698C1 /* DogImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1526B1D88600F698C1 /* DogImageView.swift */; };
+		FA112C1826B1D8F000F698C1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1726B1D8F000F698C1 /* BaseView.swift */; };
+		FA112C1A26B1EED500F698C1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1926B1EED500F698C1 /* ButtonsView.swift */; };
+		FA1E042D26AAFBF1007B3CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E042C26AAFBF1007B3CE1 /* AppDelegate.swift */; };
+		FA1E042F26AAFBF1007B3CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E042E26AAFBF1007B3CE1 /* SceneDelegate.swift */; };
+		FA1E043126AAFBF1007B3CE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E043026AAFBF1007B3CE1 /* ViewController.swift */; };
+		FA1E043426AAFBF1007B3CE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1E043226AAFBF1007B3CE1 /* Main.storyboard */; };
+		FA1E043626AAFC0A007B3CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1E043526AAFC0A007B3CE1 /* Assets.xcassets */; };
+		FA1E043926AAFC0A007B3CE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1E043726AAFC0A007B3CE1 /* LaunchScreen.storyboard */; };
+		FA1E044426AAFC0B007B3CE1 /* Happ_dogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E044326AAFC0B007B3CE1 /* Happ_dogTests.swift */; };
+		FA1E044F26AAFC0B007B3CE1 /* Happ_dogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E044E26AAFC0B007B3CE1 /* Happ_dogUITests.swift */; };
+		FA1E045F26AAFDBD007B3CE1 /* ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E045E26AAFDBD007B3CE1 /* ViewLayout.swift */; };
+		FA1E046426AAFF60007B3CE1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E046326AAFF60007B3CE1 /* HomeViewController.swift */; };
+		FA1E046626AAFF78007B3CE1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E046526AAFF78007B3CE1 /* HomeInteractor.swift */; };
+		FA1E046826AAFF85007B3CE1 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E046726AAFF85007B3CE1 /* HomePresenter.swift */; };
+		FA1E046A26AB00EB007B3CE1 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E046926AB00EB007B3CE1 /* HomeFactory.swift */; };
+		FA1E046C26AB00FD007B3CE1 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E046B26AB00FD007B3CE1 /* HomeCoordinator.swift */; };
+		FA1E046E26AB0374007B3CE1 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E046D26AB0374007B3CE1 /* HomeService.swift */; };
+		FA1E047126AB3864007B3CE1 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E047026AB3864007B3CE1 /* Dog.swift */; };
+		FA3B12C826CAF7E900C5B8DE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B12C726CAF7E900C5B8DE /* UILabel.swift */; };
+		FA3B12CA26CAFAA600C5B8DE /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B12C926CAFAA600C5B8DE /* UIButton.swift */; };
+		FD5515BCB2AFBB86A5041867 /* Pods_Happ_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA07C600BA381E4D8DD435B /* Pods_Happ_dog.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA1E044026AAFC0B007B3CE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA1E042126AAFBF1007B3CE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA1E042826AAFBF1007B3CE1;
+			remoteInfo = "Haap-dog";
+		};
+		FA1E044B26AAFC0B007B3CE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA1E042126AAFBF1007B3CE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA1E042826AAFBF1007B3CE1;
+			remoteInfo = "Haap-dog";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BC45D5BCA18AF52B2EE9C0D /* Pods-Happ-dog-Happ-dogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dog-Happ-dogUITests.debug.xcconfig"; path = "Target Support Files/Pods-Happ-dog-Happ-dogUITests/Pods-Happ-dog-Happ-dogUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		51632CE24E3841D4B91D8911 /* Pods_Happ_dogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happ_dogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67D855ABC24CBA363123DEEF /* Pods-Happ-dogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dogTests.release.xcconfig"; path = "Target Support Files/Pods-Happ-dogTests/Pods-Happ-dogTests.release.xcconfig"; sourceTree = "<group>"; };
+		7402B7F15764C06DD34F71C8 /* Pods_Happ_dog_Happ_dogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happ_dog_Happ_dogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA07C600BA381E4D8DD435B /* Pods_Happ_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happ_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF83192909F6464E3641CF2D /* Pods-Happ-dogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dogTests.debug.xcconfig"; path = "Target Support Files/Pods-Happ-dogTests/Pods-Happ-dogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE0991CD6522C1EBB47F2D0 /* Pods-Happ-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dog.release.xcconfig"; path = "Target Support Files/Pods-Happ-dog/Pods-Happ-dog.release.xcconfig"; sourceTree = "<group>"; };
+		E168632FE41236E677EA4333 /* Pods-Happ-dog-Happ-dogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dog-Happ-dogUITests.release.xcconfig"; path = "Target Support Files/Pods-Happ-dog-Happ-dogUITests/Pods-Happ-dog-Happ-dogUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EFF901B0EAFF086FBCD33083 /* Pods-Happ-dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dog.debug.xcconfig"; path = "Target Support Files/Pods-Happ-dog/Pods-Happ-dog.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0D849F26B490A300A1D8C4 /* Swipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipeable.swift; sourceTree = "<group>"; };
+		FA0FE54A26CD623A00CCB956 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FA112C1026B1D63F00F698C1 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		FA112C1326B1D7A300F698C1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		FA112C1526B1D88600F698C1 /* DogImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageView.swift; sourceTree = "<group>"; };
+		FA112C1726B1D8F000F698C1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		FA112C1926B1EED500F698C1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		FA1E042926AAFBF1007B3CE1 /* Happ-dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happ-dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1E042C26AAFBF1007B3CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA1E042E26AAFBF1007B3CE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA1E043026AAFBF1007B3CE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA1E043326AAFBF1007B3CE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA1E043526AAFC0A007B3CE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA1E043826AAFC0A007B3CE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA1E043A26AAFC0A007B3CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA1E043F26AAFC0B007B3CE1 /* Happ-dogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Happ-dogTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1E044326AAFC0B007B3CE1 /* Happ_dogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happ_dogTests.swift; sourceTree = "<group>"; };
+		FA1E044526AAFC0B007B3CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA1E044A26AAFC0B007B3CE1 /* Happ-dogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Happ-dogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1E044E26AAFC0B007B3CE1 /* Happ_dogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happ_dogUITests.swift; sourceTree = "<group>"; };
+		FA1E045026AAFC0B007B3CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA1E045E26AAFDBD007B3CE1 /* ViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayout.swift; sourceTree = "<group>"; };
+		FA1E046326AAFF60007B3CE1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA1E046526AAFF78007B3CE1 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FA1E046726AAFF85007B3CE1 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FA1E046926AB00EB007B3CE1 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		FA1E046B26AB00FD007B3CE1 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		FA1E046D26AB0374007B3CE1 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		FA1E047026AB3864007B3CE1 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		FA3B12C726CAF7E900C5B8DE /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		FA3B12C926CAFAA600C5B8DE /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA1E042626AAFBF1007B3CE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD5515BCB2AFBB86A5041867 /* Pods_Happ_dog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1E043C26AAFC0B007B3CE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E27075D79FC2A23738D0EB7 /* Pods_Happ_dogTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1E044726AAFC0B007B3CE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5624704181EC820F274E7481 /* Pods_Happ_dog_Happ_dogUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37EB4DAEEB78B1565105531D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFF901B0EAFF086FBCD33083 /* Pods-Happ-dog.debug.xcconfig */,
+				CAE0991CD6522C1EBB47F2D0 /* Pods-Happ-dog.release.xcconfig */,
+				3BC45D5BCA18AF52B2EE9C0D /* Pods-Happ-dog-Happ-dogUITests.debug.xcconfig */,
+				E168632FE41236E677EA4333 /* Pods-Happ-dog-Happ-dogUITests.release.xcconfig */,
+				AF83192909F6464E3641CF2D /* Pods-Happ-dogTests.debug.xcconfig */,
+				67D855ABC24CBA363123DEEF /* Pods-Happ-dogTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3AAEA89D7331C023C624B373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FA07C600BA381E4D8DD435B /* Pods_Happ_dog.framework */,
+				51632CE24E3841D4B91D8911 /* Pods_Happ_dogTests.framework */,
+				7402B7F15764C06DD34F71C8 /* Pods_Happ_dog_Happ_dogUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0D849E26B4905F00A1D8C4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D849F26B490A300A1D8C4 /* Swipeable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA112C0826B1CDF000F698C1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				FA112C1326B1D7A300F698C1 /* APIError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		FA112C0F26B1D62300F698C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA112C1026B1D63F00F698C1 /* UIImageView.swift */,
+				FA3B12C726CAF7E900C5B8DE /* UILabel.swift */,
+				FA3B12C926CAFAA600C5B8DE /* UIButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA1E042026AAFBF1007B3CE1 = {
+			isa = PBXGroup;
+			children = (
+				FA0FE54A26CD623A00CCB956 /* Default-568h@2x.png */,
+				FA1E042B26AAFBF1007B3CE1 /* Happ-dog */,
+				FA1E044226AAFC0B007B3CE1 /* Happ-dogTests */,
+				FA1E044D26AAFC0B007B3CE1 /* Happ-dogUITests */,
+				FA1E042A26AAFBF1007B3CE1 /* Products */,
+				37EB4DAEEB78B1565105531D /* Pods */,
+				3AAEA89D7331C023C624B373 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA1E042A26AAFBF1007B3CE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E042926AAFBF1007B3CE1 /* Happ-dog.app */,
+				FA1E043F26AAFC0B007B3CE1 /* Happ-dogTests.xctest */,
+				FA1E044A26AAFC0B007B3CE1 /* Happ-dogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA1E042B26AAFBF1007B3CE1 /* Happ-dog */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E045C26AAFCA8007B3CE1 /* AppConfiguration */,
+				FA1E045D26AAFD63007B3CE1 /* Common */,
+				FA1E046126AAFDF0007B3CE1 /* Scenes */,
+				FA1E043026AAFBF1007B3CE1 /* ViewController.swift */,
+				FA1E043226AAFBF1007B3CE1 /* Main.storyboard */,
+				FA1E043526AAFC0A007B3CE1 /* Assets.xcassets */,
+				FA1E043A26AAFC0A007B3CE1 /* Info.plist */,
+			);
+			path = "Happ-dog";
+			sourceTree = "<group>";
+		};
+		FA1E044226AAFC0B007B3CE1 /* Happ-dogTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E044326AAFC0B007B3CE1 /* Happ_dogTests.swift */,
+				FA1E044526AAFC0B007B3CE1 /* Info.plist */,
+			);
+			path = "Happ-dogTests";
+			sourceTree = "<group>";
+		};
+		FA1E044D26AAFC0B007B3CE1 /* Happ-dogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E044E26AAFC0B007B3CE1 /* Happ_dogUITests.swift */,
+				FA1E045026AAFC0B007B3CE1 /* Info.plist */,
+			);
+			path = "Happ-dogUITests";
+			sourceTree = "<group>";
+		};
+		FA1E045C26AAFCA8007B3CE1 /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E042E26AAFBF1007B3CE1 /* SceneDelegate.swift */,
+				FA1E042C26AAFBF1007B3CE1 /* AppDelegate.swift */,
+				FA1E043726AAFC0A007B3CE1 /* LaunchScreen.storyboard */,
+			);
+			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		FA1E045D26AAFD63007B3CE1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D849E26B4905F00A1D8C4 /* Protocols */,
+				FA112C0F26B1D62300F698C1 /* Extensions */,
+				FA112C0826B1CDF000F698C1 /* Enums */,
+				FA1E046026AAFDE0007B3CE1 /* Views */,
+				FA1E045E26AAFDBD007B3CE1 /* ViewLayout.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FA1E046026AAFDE0007B3CE1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA1E046126AAFDF0007B3CE1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E046226AAFF3E007B3CE1 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FA1E046226AAFF3E007B3CE1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA602D7026AF484F00777466 /* Views */,
+				FA1E046F26AB3817007B3CE1 /* Model */,
+				FA1E046326AAFF60007B3CE1 /* HomeViewController.swift */,
+				FA1E046526AAFF78007B3CE1 /* HomeInteractor.swift */,
+				FA1E046726AAFF85007B3CE1 /* HomePresenter.swift */,
+				FA1E046926AB00EB007B3CE1 /* HomeFactory.swift */,
+				FA1E046B26AB00FD007B3CE1 /* HomeCoordinator.swift */,
+				FA1E046D26AB0374007B3CE1 /* HomeService.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FA1E046F26AB3817007B3CE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E047026AB3864007B3CE1 /* Dog.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA602D7026AF484F00777466 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA112C1726B1D8F000F698C1 /* BaseView.swift */,
+				FA112C1526B1D88600F698C1 /* DogImageView.swift */,
+				FA112C1926B1EED500F698C1 /* ButtonsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA1E042826AAFBF1007B3CE1 /* Happ-dog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1E045326AAFC0B007B3CE1 /* Build configuration list for PBXNativeTarget "Happ-dog" */;
+			buildPhases = (
+				CD36742DBC17E8F16C1297A2 /* [CP] Check Pods Manifest.lock */,
+				FA1E042526AAFBF1007B3CE1 /* Sources */,
+				FA1E042626AAFBF1007B3CE1 /* Frameworks */,
+				FA1E042726AAFBF1007B3CE1 /* Resources */,
+				A353329CA515A0B798F990C5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Happ-dog";
+			productName = "Haap-dog";
+			productReference = FA1E042926AAFBF1007B3CE1 /* Happ-dog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA1E043E26AAFC0B007B3CE1 /* Happ-dogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1E045626AAFC0B007B3CE1 /* Build configuration list for PBXNativeTarget "Happ-dogTests" */;
+			buildPhases = (
+				02D7B845BBF7CB06CB86ECA6 /* [CP] Check Pods Manifest.lock */,
+				FA1E043B26AAFC0B007B3CE1 /* Sources */,
+				FA1E043C26AAFC0B007B3CE1 /* Frameworks */,
+				FA1E043D26AAFC0B007B3CE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA1E044126AAFC0B007B3CE1 /* PBXTargetDependency */,
+			);
+			name = "Happ-dogTests";
+			productName = "Haap-dogTests";
+			productReference = FA1E043F26AAFC0B007B3CE1 /* Happ-dogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA1E044926AAFC0B007B3CE1 /* Happ-dogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA1E045926AAFC0B007B3CE1 /* Build configuration list for PBXNativeTarget "Happ-dogUITests" */;
+			buildPhases = (
+				6E8C50EA07F22FA8E646426C /* [CP] Check Pods Manifest.lock */,
+				FA1E044626AAFC0B007B3CE1 /* Sources */,
+				FA1E044726AAFC0B007B3CE1 /* Frameworks */,
+				FA1E044826AAFC0B007B3CE1 /* Resources */,
+				2794FD16FD29ED2D5E9CEE9B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA1E044C26AAFC0B007B3CE1 /* PBXTargetDependency */,
+			);
+			name = "Happ-dogUITests";
+			productName = "Haap-dogUITests";
+			productReference = FA1E044A26AAFC0B007B3CE1 /* Happ-dogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA1E042126AAFBF1007B3CE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Alex Xavier";
+				TargetAttributes = {
+					FA1E042826AAFBF1007B3CE1 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FA1E043E26AAFC0B007B3CE1 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FA1E042826AAFBF1007B3CE1;
+					};
+					FA1E044926AAFC0B007B3CE1 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FA1E042826AAFBF1007B3CE1;
+					};
+				};
+			};
+			buildConfigurationList = FA1E042426AAFBF1007B3CE1 /* Build configuration list for PBXProject "Happ-dog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA1E042026AAFBF1007B3CE1;
+			productRefGroup = FA1E042A26AAFBF1007B3CE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA1E042826AAFBF1007B3CE1 /* Happ-dog */,
+				FA1E043E26AAFC0B007B3CE1 /* Happ-dogTests */,
+				FA1E044926AAFC0B007B3CE1 /* Happ-dogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA1E042726AAFBF1007B3CE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1E043926AAFC0A007B3CE1 /* LaunchScreen.storyboard in Resources */,
+				FA0FE54B26CD623A00CCB956 /* Default-568h@2x.png in Resources */,
+				FA1E043626AAFC0A007B3CE1 /* Assets.xcassets in Resources */,
+				FA1E043426AAFBF1007B3CE1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1E043D26AAFC0B007B3CE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1E044826AAFC0B007B3CE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02D7B845BBF7CB06CB86ECA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Happ-dogTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2794FD16FD29ED2D5E9CEE9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happ-dog-Happ-dogUITests/Pods-Happ-dog-Happ-dogUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happ-dog-Happ-dogUITests/Pods-Happ-dog-Happ-dogUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Happ-dog-Happ-dogUITests/Pods-Happ-dog-Happ-dogUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E8C50EA07F22FA8E646426C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Happ-dog-Happ-dogUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A353329CA515A0B798F990C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happ-dog/Pods-Happ-dog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happ-dog/Pods-Happ-dog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Happ-dog/Pods-Happ-dog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD36742DBC17E8F16C1297A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Happ-dog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA1E042526AAFBF1007B3CE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1E046826AAFF85007B3CE1 /* HomePresenter.swift in Sources */,
+				FA1E046426AAFF60007B3CE1 /* HomeViewController.swift in Sources */,
+				FA1E046C26AB00FD007B3CE1 /* HomeCoordinator.swift in Sources */,
+				FA112C1426B1D7A300F698C1 /* APIError.swift in Sources */,
+				FA1E045F26AAFDBD007B3CE1 /* ViewLayout.swift in Sources */,
+				FA1E046E26AB0374007B3CE1 /* HomeService.swift in Sources */,
+				FA112C1A26B1EED500F698C1 /* ButtonsView.swift in Sources */,
+				FA1E043126AAFBF1007B3CE1 /* ViewController.swift in Sources */,
+				FA112C1626B1D88600F698C1 /* DogImageView.swift in Sources */,
+				FA1E046626AAFF78007B3CE1 /* HomeInteractor.swift in Sources */,
+				FA3B12CA26CAFAA600C5B8DE /* UIButton.swift in Sources */,
+				FA1E046A26AB00EB007B3CE1 /* HomeFactory.swift in Sources */,
+				FA1E042D26AAFBF1007B3CE1 /* AppDelegate.swift in Sources */,
+				FA1E042F26AAFBF1007B3CE1 /* SceneDelegate.swift in Sources */,
+				FA0D84A026B490A400A1D8C4 /* Swipeable.swift in Sources */,
+				FA3B12C826CAF7E900C5B8DE /* UILabel.swift in Sources */,
+				FA112C1826B1D8F000F698C1 /* BaseView.swift in Sources */,
+				FA112C1126B1D63F00F698C1 /* UIImageView.swift in Sources */,
+				FA1E047126AB3864007B3CE1 /* Dog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1E043B26AAFC0B007B3CE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1E044426AAFC0B007B3CE1 /* Happ_dogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA1E044626AAFC0B007B3CE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1E044F26AAFC0B007B3CE1 /* Happ_dogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA1E044126AAFC0B007B3CE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA1E042826AAFBF1007B3CE1 /* Happ-dog */;
+			targetProxy = FA1E044026AAFC0B007B3CE1 /* PBXContainerItemProxy */;
+		};
+		FA1E044C26AAFC0B007B3CE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA1E042826AAFBF1007B3CE1 /* Happ-dog */;
+			targetProxy = FA1E044B26AAFC0B007B3CE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA1E043226AAFBF1007B3CE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA1E043326AAFBF1007B3CE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA1E043726AAFC0A007B3CE1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA1E043826AAFC0A007B3CE1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA1E045126AAFC0B007B3CE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA1E045226AAFC0B007B3CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA1E045426AAFC0B007B3CE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFF901B0EAFF086FBCD33083 /* Pods-Happ-dog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9KZ2SM4ZG;
+				INFOPLIST_FILE = "Happ-dog/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Xavier.Haap-dog";
+				PRODUCT_NAME = "Happ-dog";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA1E045526AAFC0B007B3CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAE0991CD6522C1EBB47F2D0 /* Pods-Happ-dog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9KZ2SM4ZG;
+				INFOPLIST_FILE = "Happ-dog/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Xavier.Haap-dog";
+				PRODUCT_NAME = "Happ-dog";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA1E045726AAFC0B007B3CE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF83192909F6464E3641CF2D /* Pods-Happ-dogTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9KZ2SM4ZG;
+				INFOPLIST_FILE = "Haap-dogTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Xavier.Haap-dogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happ-dog.app/Happ-dog";
+			};
+			name = Debug;
+		};
+		FA1E045826AAFC0B007B3CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67D855ABC24CBA363123DEEF /* Pods-Happ-dogTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9KZ2SM4ZG;
+				INFOPLIST_FILE = "Haap-dogTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Xavier.Haap-dogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happ-dog.app/Happ-dog";
+			};
+			name = Release;
+		};
+		FA1E045A26AAFC0B007B3CE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BC45D5BCA18AF52B2EE9C0D /* Pods-Happ-dog-Happ-dogUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9KZ2SM4ZG;
+				INFOPLIST_FILE = "Haap-dogUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Xavier.Haap-dogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Haap-dog";
+			};
+			name = Debug;
+		};
+		FA1E045B26AAFC0B007B3CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E168632FE41236E677EA4333 /* Pods-Happ-dog-Happ-dogUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9KZ2SM4ZG;
+				INFOPLIST_FILE = "Haap-dogUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Xavier.Haap-dogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Haap-dog";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA1E042426AAFBF1007B3CE1 /* Build configuration list for PBXProject "Happ-dog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1E045126AAFC0B007B3CE1 /* Debug */,
+				FA1E045226AAFC0B007B3CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1E045326AAFC0B007B3CE1 /* Build configuration list for PBXNativeTarget "Happ-dog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1E045426AAFC0B007B3CE1 /* Debug */,
+				FA1E045526AAFC0B007B3CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1E045626AAFC0B007B3CE1 /* Build configuration list for PBXNativeTarget "Happ-dogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1E045726AAFC0B007B3CE1 /* Debug */,
+				FA1E045826AAFC0B007B3CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA1E045926AAFC0B007B3CE1 /* Build configuration list for PBXNativeTarget "Happ-dogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1E045A26AAFC0B007B3CE1 /* Debug */,
+				FA1E045B26AAFC0B007B3CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA1E042126AAFBF1007B3CE1 /* Project object */;
+}
