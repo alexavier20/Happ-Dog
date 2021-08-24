@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import Koloda
 import UIKit
+
+var kolodaView: KolodaView!
 
 class ButtonsView: BaseView {
     lazy var likeButton: UIButton = .buttonWithImage(image: #imageLiteral(resourceName: "matchImg") , cornerRadius: 32, target: self, selector: #selector(like), sizeToFit: true)
@@ -32,14 +35,20 @@ class ButtonsView: BaseView {
         ])
     }
     
+    func loadKolodaview(koloda: KolodaView) {
+        kolodaView = koloda
+    }
+    
     override func setUpViews() {
        buildLayout()
     }
     
     @objc func like() {
+        kolodaView?.swipe(.right)
         print("like print")
     }
     @objc func pass() {
+        kolodaView?.swipe(.left)
         print("pass print")
     }
 }

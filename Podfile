@@ -17,5 +17,6 @@ target 'Happ-dog' do
   end
 
   pod 'Alamofire', '~> 5.4'
+  pod "Koloda"
 
 end

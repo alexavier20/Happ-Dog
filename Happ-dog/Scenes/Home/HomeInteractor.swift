@@ -12,7 +12,7 @@ import UIKit
 protocol HomeInteracting: AnyObject {
     func initialFetch()
     func dogCount() -> Int
-    func getDog(indexPath: IndexPath) -> Dog
+    func getDog(index: Int) -> Dog
     func getAllDogs() -> [Dog]
     func clearDogs()
 }
@@ -51,8 +51,8 @@ extension HomeInteractor: HomeInteracting {
         dogs.count
     }
     
-    func getDog(indexPath: IndexPath) -> Dog {
-        dogs[indexPath.row]
+    func getDog(index: Int) -> Dog {
+        dogs[index]
     }
     
     func getAllDogs() -> [Dog] {

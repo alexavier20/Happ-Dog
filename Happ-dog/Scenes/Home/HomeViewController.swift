@@ -8,45 +8,58 @@
 
 import Foundation
 import UIKit
+import Koloda
 
 protocol HomeDisplaying: AnyObject {
     func loadHome(dogs: [Dog])
 }
 
+private var numberOfCards: Int = 5
+
 final class HomeViewController: UIViewController {
     private let interactor: HomeInteracting
     
-    lazy var dogCardView: DogCardView = {
-        let tc = DogCardView()
-        tc.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(swipeCard(sender:))))
-        return tc
+    lazy var kolodaView: KolodaView = {
+        let koloda = KolodaView()
+        koloda.translatesAutoresizingMaskIntoConstraints = false
+        
+        return koloda
     }()
     
-    let buttonsContainer: ButtonsView = {
-        let c = ButtonsView()
-        return c
+    lazy var buttonView: ButtonsView = {
+       let btnView = ButtonsView()
+        
+        btnView.translatesAutoresizingMaskIntoConstraints = false
+        return btnView
     }()
+    
+    let images = ["dog1", "dog2", "dog3", "dog4"]
     
     func configureDogCardViewConstraints() {
         NSLayoutConstraint.activate([
-            dogCardView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            dogCardView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.90),
-            dogCardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            dogCardView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.70),            
+            kolodaView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            kolodaView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.95),
+            kolodaView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            kolodaView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.70),
         ])
     }
     
-    func configureButtonsContainerViewConstraints() {        
+    func configureButtonsViewConstraints() {
         NSLayoutConstraint.activate([
-            buttonsContainer.topAnchor.constraint(equalTo: dogCardView.bottomAnchor, constant: 16),
-            buttonsContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            buttonsContainer.widthAnchor.constraint(equalTo: dogCardView.widthAnchor)
+            buttonView.topAnchor.constraint(equalTo: kolodaView.bottomAnchor, constant: 16),
+            buttonView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.95),
+            buttonView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor.initialFetch()
+        
+        kolodaView.dataSource = self
+        kolodaView.delegate = self
+        
+        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
         buildLayout()
     }
     
@@ -56,22 +69,56 @@ final class HomeViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) { nil }
+}
+
+extension HomeViewController: KolodaViewDelegate {
     
-    @objc func swipeCard(sender: UIPanGestureRecognizer) {
-        if let card = sender.view {
-            sender.swipeView(card)
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        koloda.reloadData()
+    }
+    
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+    }
+    
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection)
+    {
+        if direction == .left {
+          //...
+          print ("swipe left")
         }
+        if direction == .right {
+          //...
+          print("swipe right")
+        }
+    }
+}
+
+extension HomeViewController: KolodaViewDataSource {
+
+    func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
+        return 4
+    }
+
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        return .default
+    }
+
+    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
+        let view: UIImageView = .cardImage(image: UIImage(named: images[index]) ?? UIImage(), cornerRadius: 8, interactionEnabled: true, contentMode: .scaleAspectFill, sizeToFit: true)
+        return view
     }
 }
 
 extension HomeViewController: HomeDisplaying {
     func loadHome(dogs: [Dog]) {
+        buttonView.loadKolodaview(koloda: kolodaView)
         
-        for dog in dogs {
+        //for dog in dogs {
             //Preciso criar um novo dogCardView aqui dentro, para cada cachorro um card
             //MAS o objeto nao seria global e nao sei como coloca-lo nas configuracoes(addSubview e Constraints).
-            dogCardView.loadDogCardView(dog: dog)
-        }
+            //dogCardView.loadDogCardView(dog: dog)
+        //}
     }
 }
 
@@ -81,13 +128,12 @@ extension HomeViewController: ViewLayout {
     }
     
     func configureHierarchy() {
-        view.addSubview(dogCardView)
-        view.addSubview(buttonsContainer)
+        view.addSubview(kolodaView)
+        view.addSubview(buttonView)
     }
     
     func configureConstraints() {
         configureDogCardViewConstraints()
-        configureButtonsContainerViewConstraints()
+        configureButtonsViewConstraints()
     }
-    
 }

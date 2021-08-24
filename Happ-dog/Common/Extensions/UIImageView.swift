@@ -15,7 +15,7 @@ extension UIImageView {
         //imageView.image = image
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = cornerRadius
-        imageView.clipsToBounds = true
+        imageView.clipsToBounds = true        
         imageView.isUserInteractionEnabled = interactionEnabled
         imageView.contentMode = contentMode
         if sizeToFit {
@@ -23,6 +23,20 @@ extension UIImageView {
         }
         return imageView
     }
+    
+    static func cardImage (image: UIImage, cornerRadius: CGFloat, interactionEnabled: Bool, contentMode: UIView.ContentMode, sizeToFit: Bool) -> UIImageView {
+           let imageView = UIImageView()
+           imageView.image = image
+           imageView.translatesAutoresizingMaskIntoConstraints = false
+           imageView.layer.cornerRadius = cornerRadius
+           imageView.clipsToBounds = true
+           imageView.isUserInteractionEnabled = interactionEnabled
+           imageView.contentMode = contentMode
+           if sizeToFit {
+               imageView.sizeToFit()
+           }
+           return imageView
+       }
     
     func loadImge(withUrl url: URL) {
         DispatchQueue.global().async { [weak self] in
