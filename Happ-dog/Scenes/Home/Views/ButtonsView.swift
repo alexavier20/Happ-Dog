@@ -12,7 +12,7 @@ import UIKit
 
 var kolodaView: KolodaView!
 
-class ButtonsView: BaseView {
+class ButtonsView: UIView {
     lazy var likeButton: UIButton = .buttonWithImage(image: #imageLiteral(resourceName: "matchImg") , cornerRadius: 32, target: self, selector: #selector(like), sizeToFit: true)
     lazy var passButton: UIButton = .buttonWithImage(image: #imageLiteral(resourceName: "passImg"), cornerRadius: 32, target: self, selector: #selector(pass), sizeToFit: true)
     
@@ -35,12 +35,16 @@ class ButtonsView: BaseView {
         ])
     }
     
-    func loadKolodaview(koloda: KolodaView) {
-        kolodaView = koloda
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        buildLayout()
     }
     
-    override func setUpViews() {
-       buildLayout()
+    @available(*, unavailable)
+    required init?(coder: NSCoder) { nil }
+    
+    func loadKolodaview(koloda: KolodaView) {
+        kolodaView = koloda
     }
     
     @objc func like() {

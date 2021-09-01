@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+final class MatchViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    init(interactor: HomeInteracting) {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) { nil }
+}

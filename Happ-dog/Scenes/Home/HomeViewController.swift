@@ -22,25 +22,25 @@ final class HomeViewController: UIViewController {
     lazy var kolodaView: KolodaView = {
         let koloda = KolodaView()
         koloda.translatesAutoresizingMaskIntoConstraints = false
+        koloda.countOfVisibleCards = 1
         
         return koloda
     }()
     
+    lazy var cardView = Cardview()
+    
     lazy var buttonView: ButtonsView = {
-       let btnView = ButtonsView()
-        
+        let btnView = ButtonsView()
         btnView.translatesAutoresizingMaskIntoConstraints = false
         return btnView
     }()
-    
-    let images = ["dog1", "dog2", "dog3", "dog4"]
     
     func configureDogCardViewConstraints() {
         NSLayoutConstraint.activate([
             kolodaView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
             kolodaView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.95),
             kolodaView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            kolodaView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.70),
+            kolodaView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.68),
         ])
     }
     
@@ -97,28 +97,33 @@ extension HomeViewController: KolodaViewDelegate {
 extension HomeViewController: KolodaViewDataSource {
 
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        return 4
+        return interactor.dogCount()
     }
-
+    
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
         return .default
     }
 
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        let view: UIImageView = .cardImage(image: UIImage(named: images[index]) ?? UIImage(), cornerRadius: 8, interactionEnabled: true, contentMode: .scaleAspectFill, sizeToFit: true)
-        return view
+        let dog: Dog = interactor.getDog(index: index)
+        
+        var imageDog: UIImage = UIImage()
+        let url = URL(string: dog.image.url)
+        if let data = try? Data(contentsOf: url!)
+        {
+            imageDog = UIImage(data: data) ?? UIImage()
+        }
+        
+        cardView.loadCardView(dogImage: imageDog, dog: dog)
+        
+        return cardView
     }
 }
 
 extension HomeViewController: HomeDisplaying {
     func loadHome(dogs: [Dog]) {
+        kolodaView.reloadData()
         buttonView.loadKolodaview(koloda: kolodaView)
-        
-        //for dog in dogs {
-            //Preciso criar um novo dogCardView aqui dentro, para cada cachorro um card
-            //MAS o objeto nao seria global e nao sei como coloca-lo nas configuracoes(addSubview e Constraints).
-            //dogCardView.loadDogCardView(dog: dog)
-        //}
     }
 }
 
@@ -129,11 +134,16 @@ extension HomeViewController: ViewLayout {
     
     func configureHierarchy() {
         view.addSubview(kolodaView)
+        kolodaView.addSubview(cardView)
         view.addSubview(buttonView)
     }
     
     func configureConstraints() {
-        configureDogCardViewConstraints()
+        configureDogCardViewConstraints()       
         configureButtonsViewConstraints()
+        cardView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
+
+
+

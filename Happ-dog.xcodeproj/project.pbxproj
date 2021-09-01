@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		0E27075D79FC2A23738D0EB7 /* Pods_Happ_dogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51632CE24E3841D4B91D8911 /* Pods_Happ_dogTests.framework */; };
 		5624704181EC820F274E7481 /* Pods_Happ_dog_Happ_dogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7402B7F15764C06DD34F71C8 /* Pods_Happ_dog_Happ_dogUITests.framework */; };
+		A85FDCD026DE60ED00F63372 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85FDCCF26DE60ED00F63372 /* CardView.swift */; };
+		A85FDCD326DEB7EA00F63372 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85FDCD226DEB7EA00F63372 /* MatchViewController.swift */; };
 		FA0D84A026B490A400A1D8C4 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D849F26B490A300A1D8C4 /* Swipeable.swift */; };
 		FA0FE54B26CD623A00CCB956 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0FE54A26CD623A00CCB956 /* Default-568h@2x.png */; };
 		FA112C1126B1D63F00F698C1 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1026B1D63F00F698C1 /* UIImageView.swift */; };
 		FA112C1426B1D7A300F698C1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1326B1D7A300F698C1 /* APIError.swift */; };
-		FA112C1626B1D88600F698C1 /* DogImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1526B1D88600F698C1 /* DogImageView.swift */; };
-		FA112C1826B1D8F000F698C1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1726B1D8F000F698C1 /* BaseView.swift */; };
 		FA112C1A26B1EED500F698C1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1926B1EED500F698C1 /* ButtonsView.swift */; };
 		FA1E042D26AAFBF1007B3CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E042C26AAFBF1007B3CE1 /* AppDelegate.swift */; };
 		FA1E042F26AAFBF1007B3CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E042E26AAFBF1007B3CE1 /* SceneDelegate.swift */; };
@@ -60,6 +60,8 @@
 		67D855ABC24CBA363123DEEF /* Pods-Happ-dogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dogTests.release.xcconfig"; path = "Target Support Files/Pods-Happ-dogTests/Pods-Happ-dogTests.release.xcconfig"; sourceTree = "<group>"; };
 		7402B7F15764C06DD34F71C8 /* Pods_Happ_dog_Happ_dogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happ_dog_Happ_dogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA07C600BA381E4D8DD435B /* Pods_Happ_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happ_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A85FDCCF26DE60ED00F63372 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A85FDCD226DEB7EA00F63372 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		AF83192909F6464E3641CF2D /* Pods-Happ-dogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dogTests.debug.xcconfig"; path = "Target Support Files/Pods-Happ-dogTests/Pods-Happ-dogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAE0991CD6522C1EBB47F2D0 /* Pods-Happ-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dog.release.xcconfig"; path = "Target Support Files/Pods-Happ-dog/Pods-Happ-dog.release.xcconfig"; sourceTree = "<group>"; };
 		E168632FE41236E677EA4333 /* Pods-Happ-dog-Happ-dogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dog-Happ-dogUITests.release.xcconfig"; path = "Target Support Files/Pods-Happ-dog-Happ-dogUITests/Pods-Happ-dog-Happ-dogUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,8 +70,6 @@
 		FA0FE54A26CD623A00CCB956 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FA112C1026B1D63F00F698C1 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		FA112C1326B1D7A300F698C1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		FA112C1526B1D88600F698C1 /* DogImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageView.swift; sourceTree = "<group>"; };
-		FA112C1726B1D8F000F698C1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		FA112C1926B1EED500F698C1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		FA1E042926AAFBF1007B3CE1 /* Happ-dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happ-dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1E042C26AAFBF1007B3CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +146,14 @@
 				7402B7F15764C06DD34F71C8 /* Pods_Happ_dog_Happ_dogUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A85FDCD126DEB60700F63372 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				A85FDCD226DEB7EA00F63372 /* MatchViewController.swift */,
+			);
+			path = Match;
 			sourceTree = "<group>";
 		};
 		FA0D849E26B4905F00A1D8C4 /* Protocols */ = {
@@ -245,22 +253,15 @@
 				FA0D849E26B4905F00A1D8C4 /* Protocols */,
 				FA112C0F26B1D62300F698C1 /* Extensions */,
 				FA112C0826B1CDF000F698C1 /* Enums */,
-				FA1E046026AAFDE0007B3CE1 /* Views */,
 				FA1E045E26AAFDBD007B3CE1 /* ViewLayout.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		FA1E046026AAFDE0007B3CE1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		FA1E046126AAFDF0007B3CE1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A85FDCD126DEB60700F63372 /* Match */,
 				FA1E046226AAFF3E007B3CE1 /* Home */,
 			);
 			path = Scenes;
@@ -292,9 +293,8 @@
 		FA602D7026AF484F00777466 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FA112C1726B1D8F000F698C1 /* BaseView.swift */,
-				FA112C1526B1D88600F698C1 /* DogImageView.swift */,
 				FA112C1926B1EED500F698C1 /* ButtonsView.swift */,
+				A85FDCCF26DE60ED00F63372 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Alex Xavier";
 				TargetAttributes = {
 					FA1E042826AAFBF1007B3CE1 = {
@@ -547,15 +547,15 @@
 				FA1E046E26AB0374007B3CE1 /* HomeService.swift in Sources */,
 				FA112C1A26B1EED500F698C1 /* ButtonsView.swift in Sources */,
 				FA1E043126AAFBF1007B3CE1 /* ViewController.swift in Sources */,
-				FA112C1626B1D88600F698C1 /* DogImageView.swift in Sources */,
 				FA1E046626AAFF78007B3CE1 /* HomeInteractor.swift in Sources */,
 				FA3B12CA26CAFAA600C5B8DE /* UIButton.swift in Sources */,
+				A85FDCD026DE60ED00F63372 /* CardView.swift in Sources */,
 				FA1E046A26AB00EB007B3CE1 /* HomeFactory.swift in Sources */,
 				FA1E042D26AAFBF1007B3CE1 /* AppDelegate.swift in Sources */,
 				FA1E042F26AAFBF1007B3CE1 /* SceneDelegate.swift in Sources */,
 				FA0D84A026B490A400A1D8C4 /* Swipeable.swift in Sources */,
+				A85FDCD326DEB7EA00F63372 /* MatchViewController.swift in Sources */,
 				FA3B12C826CAF7E900C5B8DE /* UILabel.swift in Sources */,
-				FA112C1826B1D8F000F698C1 /* BaseView.swift in Sources */,
 				FA112C1126B1D63F00F698C1 /* UIImageView.swift in Sources */,
 				FA1E047126AB3864007B3CE1 /* Dog.swift in Sources */,
 			);
@@ -638,6 +638,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -698,6 +699,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

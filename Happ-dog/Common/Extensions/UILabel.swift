@@ -9,14 +9,16 @@
 import UIKit
 
 extension UILabel {
-    static func textLabel (text: String, textColor: UIColor, fontStyle: UIFont.TextStyle, textAlignment: NSTextAlignment?, sizeToFit: Bool, adjustToFit: Bool) -> UILabel {
+    static func textLabel (text: String, size: CGFloat, weight: UIFont.Weight, textColor: UIColor, textAlignment: NSTextAlignment?, sizeToFit: Bool, adjustToFit: Bool) -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontSizeToFitWidth = adjustToFit
         label.text = text
-        label.font = UIFont.preferredFont(forTextStyle: fontStyle)
+        label.font = UIFont.systemFont(ofSize: size, weight: weight)
         label.textAlignment = textAlignment ?? .left
         label.textColor = textColor
+        label.adjustsFontSizeToFitWidth = true
+      
         if sizeToFit {
             label.sizeToFit()
         }

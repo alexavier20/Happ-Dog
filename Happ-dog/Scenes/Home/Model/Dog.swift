@@ -11,9 +11,9 @@ import Foundation
 struct Dog: Decodable {
     let id: Int
     let name: String
-    //let bredFor: String
+    let bredFor: String?
     //let lifeSpan: String
-    //let temperament: String
+    let temperament: String?
     //let origin: String
     let image: Image
 }

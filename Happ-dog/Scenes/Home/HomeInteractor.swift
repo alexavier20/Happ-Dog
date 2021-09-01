@@ -39,7 +39,7 @@ extension HomeInteractor: HomeInteracting {
             case .success(let dogResponse) where dogResponse.count == 0:
                 self.presenter.presentEmpty()
             case .success(let dogs):
-                self.dogs.append(contentsOf: dogs)
+                self.dogs.append(contentsOf: dogs.shuffled())
                 self.presenter.presentdogs(dogs: dogs)
             case .failure:
                 self.presenter.presentError()
