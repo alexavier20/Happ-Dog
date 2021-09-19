@@ -40,7 +40,7 @@ final class HomeViewController: UIViewController {
             kolodaView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
             kolodaView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.95),
             kolodaView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            kolodaView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.68),
+            kolodaView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.66),
         ])
     }
     
@@ -78,11 +78,14 @@ extension HomeViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+        let dog = interactor.getDog(index: index)
+        interactor.fetchDetails(dog: dog)
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection)
     {
+        //let dog: Dog = interactor.getDog(index: index)
+        
         if direction == .left {
           //...
           print ("swipe left")

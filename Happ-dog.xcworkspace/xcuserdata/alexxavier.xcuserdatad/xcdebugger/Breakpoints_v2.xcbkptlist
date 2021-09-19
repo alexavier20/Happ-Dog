@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "877A6396-F1EE-4A39-AF28-AA378C240D81"
+            uuid = "4F5EA2E5-242B-4D29-882D-C1ADA5107475"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Happ-dog/Scenes/Home/HomeService.swift"
+            filePath = "Happ-dog/Scenes/Details/DetailsService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "InitialFetch(completion:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchDetails(name:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "593F1CE5-04EE-4155-BF27-3DC951DD6746"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Happ-dog/Scenes/Details/DetailsService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchDetails(name:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

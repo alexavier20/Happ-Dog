@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum HomeAction {
-    case details(repositoryName: String, login: String)
+    case details(dog: Dog)
 }
 
 protocol HomeCoordinating {
@@ -24,6 +24,12 @@ final class HomeCoordinator {
 
 extension HomeCoordinator: HomeCoordinating {
     func perform(action: HomeAction) {
-        
+        switch action {
+        case .details(let dog):
+            let detailsViewController = DetailsFactory.make(dog: dog)
+            viewController?.navigationController?.pushViewController(detailsViewController, animated: true)
+        default:
+            break
+        }
     }
 }

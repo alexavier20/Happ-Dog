@@ -23,9 +23,9 @@ class Cardview: UIView {
         return imageView
     }()
     
-    lazy var nameLabel: UILabel = .textLabel(text: "", size: 24, weight: .heavy, textColor: .white, textAlignment: .left, sizeToFit: false, adjustToFit: false)
+    lazy var nameLabel: UILabel = .textLabel(text: "", size: 24, weight: .heavy, textColor: .white, textAlignment: .left, sizeToFit: true, adjustToFit: true)
     
-    lazy var breedForLabel: UILabel = .textLabel(text: "", size: 16, weight: .medium, textColor: .white, textAlignment: .left, sizeToFit: true, adjustToFit: true)
+    lazy var breedForLabel: UILabel = .textLabel(text: "", size: 16, weight: .medium, textColor: .white, textAlignment: .left, sizeToFit: false, adjustToFit: false)
         
     lazy var viewInformation: UIView = {
         let view = UIView()
@@ -78,7 +78,7 @@ class Cardview: UIView {
     
     func loadCardView(dogImage: UIImage, dog: Dog) {
         self.dogImageView.image = dogImage
-        self.nameLabel.text = dog.name
+        self.nameLabel.text = dog.dogBreed
         self.breedForLabel.text = dog.bredFor
     }
     

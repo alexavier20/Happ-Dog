@@ -8,13 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        let homeVC = HomeFactory.make()
+        let matchVC = MatchViewController()
+        let searchVC = SearchViewController()
+        
+        homeVC.title = "Home"
+        matchVC.title = "Match"
+        searchVC.title = "Search"
+        
+        homeVC.tabBarItem.image = UIImage(named: "homeLogo")
+        matchVC.tabBarItem.image = UIImage(named: "matchLogo")
+        searchVC.tabBarItem.image = UIImage(named: "searchLogo")
+        
+        self.setViewControllers([homeVC, matchVC, searchVC], animated: false)
+        self.tabBar.tintColor = .systemRed
     }
-
-
 }
 

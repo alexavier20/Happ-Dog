@@ -12,9 +12,10 @@ import UIKit
 final class MatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .red
     }
     
-    init(interactor: HomeInteracting) {
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     

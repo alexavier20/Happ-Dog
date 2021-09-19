@@ -15,6 +15,7 @@ protocol HomeInteracting: AnyObject {
     func getDog(index: Int) -> Dog
     func getAllDogs() -> [Dog]
     func clearDogs()
+    func fetchDetails(dog: Dog)
 }
 
 final class HomeInteractor {
@@ -29,6 +30,10 @@ final class HomeInteractor {
 }
 
 extension HomeInteractor: HomeInteracting {
+    func fetchDetails(dog: Dog) {
+        presenter.presentDetails(dog: dog)
+    }
+    
     func initialFetch() {
         presenter.presentLoading(shouldPresent: true)
         

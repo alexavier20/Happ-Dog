@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		0E27075D79FC2A23738D0EB7 /* Pods_Happ_dogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51632CE24E3841D4B91D8911 /* Pods_Happ_dogTests.framework */; };
 		5624704181EC820F274E7481 /* Pods_Happ_dog_Happ_dogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7402B7F15764C06DD34F71C8 /* Pods_Happ_dog_Happ_dogUITests.framework */; };
+		A80A7C6426DFC78700CA77FD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7C6326DFC78700CA77FD /* SearchViewController.swift */; };
 		A85FDCD026DE60ED00F63372 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85FDCCF26DE60ED00F63372 /* CardView.swift */; };
 		A85FDCD326DEB7EA00F63372 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85FDCD226DEB7EA00F63372 /* MatchViewController.swift */; };
+		A8E53D9926F51DA500937D1A /* DetailsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E53D9826F51DA500937D1A /* DetailsContentView.swift */; };
+		A8FEC1A726EF916B00D47EAE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FEC1A626EF916B00D47EAE /* DetailsViewController.swift */; };
+		A8FEC1A926EF929700D47EAE /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FEC1A826EF929700D47EAE /* DetailsInteractor.swift */; };
+		A8FEC1AB26EF93E000D47EAE /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FEC1AA26EF93E000D47EAE /* DetailsPresenter.swift */; };
+		A8FEC1AD26EF991A00D47EAE /* DetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FEC1AC26EF991A00D47EAE /* DetailsFactory.swift */; };
 		FA0D84A026B490A400A1D8C4 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D849F26B490A300A1D8C4 /* Swipeable.swift */; };
 		FA0FE54B26CD623A00CCB956 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0FE54A26CD623A00CCB956 /* Default-568h@2x.png */; };
 		FA112C1126B1D63F00F698C1 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA112C1026B1D63F00F698C1 /* UIImageView.swift */; };
@@ -60,8 +66,14 @@
 		67D855ABC24CBA363123DEEF /* Pods-Happ-dogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dogTests.release.xcconfig"; path = "Target Support Files/Pods-Happ-dogTests/Pods-Happ-dogTests.release.xcconfig"; sourceTree = "<group>"; };
 		7402B7F15764C06DD34F71C8 /* Pods_Happ_dog_Happ_dogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happ_dog_Happ_dogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA07C600BA381E4D8DD435B /* Pods_Happ_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happ_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A80A7C6326DFC78700CA77FD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A85FDCCF26DE60ED00F63372 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A85FDCD226DEB7EA00F63372 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		A8E53D9826F51DA500937D1A /* DetailsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContentView.swift; sourceTree = "<group>"; };
+		A8FEC1A626EF916B00D47EAE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A8FEC1A826EF929700D47EAE /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		A8FEC1AA26EF93E000D47EAE /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		A8FEC1AC26EF991A00D47EAE /* DetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFactory.swift; sourceTree = "<group>"; };
 		AF83192909F6464E3641CF2D /* Pods-Happ-dogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dogTests.debug.xcconfig"; path = "Target Support Files/Pods-Happ-dogTests/Pods-Happ-dogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAE0991CD6522C1EBB47F2D0 /* Pods-Happ-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dog.release.xcconfig"; path = "Target Support Files/Pods-Happ-dog/Pods-Happ-dog.release.xcconfig"; sourceTree = "<group>"; };
 		E168632FE41236E677EA4333 /* Pods-Happ-dog-Happ-dogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ-dog-Happ-dogUITests.release.xcconfig"; path = "Target Support Files/Pods-Happ-dog-Happ-dogUITests/Pods-Happ-dog-Happ-dogUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,12 +160,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A80A7C6226DFC75A00CA77FD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A80A7C6326DFC78700CA77FD /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		A85FDCD126DEB60700F63372 /* Match */ = {
 			isa = PBXGroup;
 			children = (
 				A85FDCD226DEB7EA00F63372 /* MatchViewController.swift */,
 			);
 			path = Match;
+			sourceTree = "<group>";
+		};
+		A8E53D9726F51D4500937D1A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8E53D9826F51DA500937D1A /* DetailsContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8FEC1A526EF912600D47EAE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A8FEC1A626EF916B00D47EAE /* DetailsViewController.swift */,
+				A8FEC1A826EF929700D47EAE /* DetailsInteractor.swift */,
+				A8FEC1AA26EF93E000D47EAE /* DetailsPresenter.swift */,
+				A8FEC1AC26EF991A00D47EAE /* DetailsFactory.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		FA0D849E26B4905F00A1D8C4 /* Protocols */ = {
@@ -261,6 +300,9 @@
 		FA1E046126AAFDF0007B3CE1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A8E53D9726F51D4500937D1A /* Views */,
+				A8FEC1A526EF912600D47EAE /* Details */,
+				A80A7C6226DFC75A00CA77FD /* Search */,
 				A85FDCD126DEB60700F63372 /* Match */,
 				FA1E046226AAFF3E007B3CE1 /* Home */,
 			);
@@ -541,14 +583,19 @@
 			files = (
 				FA1E046826AAFF85007B3CE1 /* HomePresenter.swift in Sources */,
 				FA1E046426AAFF60007B3CE1 /* HomeViewController.swift in Sources */,
+				A8FEC1AB26EF93E000D47EAE /* DetailsPresenter.swift in Sources */,
 				FA1E046C26AB00FD007B3CE1 /* HomeCoordinator.swift in Sources */,
 				FA112C1426B1D7A300F698C1 /* APIError.swift in Sources */,
+				A8E53D9926F51DA500937D1A /* DetailsContentView.swift in Sources */,
 				FA1E045F26AAFDBD007B3CE1 /* ViewLayout.swift in Sources */,
 				FA1E046E26AB0374007B3CE1 /* HomeService.swift in Sources */,
 				FA112C1A26B1EED500F698C1 /* ButtonsView.swift in Sources */,
 				FA1E043126AAFBF1007B3CE1 /* ViewController.swift in Sources */,
 				FA1E046626AAFF78007B3CE1 /* HomeInteractor.swift in Sources */,
+				A8FEC1A926EF929700D47EAE /* DetailsInteractor.swift in Sources */,
 				FA3B12CA26CAFAA600C5B8DE /* UIButton.swift in Sources */,
+				A80A7C6426DFC78700CA77FD /* SearchViewController.swift in Sources */,
+				A8FEC1A726EF916B00D47EAE /* DetailsViewController.swift in Sources */,
 				A85FDCD026DE60ED00F63372 /* CardView.swift in Sources */,
 				FA1E046A26AB00EB007B3CE1 /* HomeFactory.swift in Sources */,
 				FA1E042D26AAFBF1007B3CE1 /* AppDelegate.swift in Sources */,
@@ -556,6 +603,7 @@
 				FA0D84A026B490A400A1D8C4 /* Swipeable.swift in Sources */,
 				A85FDCD326DEB7EA00F63372 /* MatchViewController.swift in Sources */,
 				FA3B12C826CAF7E900C5B8DE /* UILabel.swift in Sources */,
+				A8FEC1AD26EF991A00D47EAE /* DetailsFactory.swift in Sources */,
 				FA112C1126B1D63F00F698C1 /* UIImageView.swift in Sources */,
 				FA1E047126AB3864007B3CE1 /* Dog.swift in Sources */,
 			);

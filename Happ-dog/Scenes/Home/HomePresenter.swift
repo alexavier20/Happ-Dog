@@ -15,6 +15,7 @@ protocol HomePresenting: AnyObject {
     func presentError()
     func presentLoading(shouldPresent: Bool)
     func presentEmpty()
+    func presentDetails(dog: Dog)
 }
 
 final class HomePresenter {
@@ -27,6 +28,10 @@ final class HomePresenter {
 }
 
 extension HomePresenter: HomePresenting {
+    func presentDetails(dog: Dog) {
+        coordinator.perform(action: .details(dog: dog))
+    }
+    
     func presentdogs(dogs: [Dog]) {
         viewController?.loadHome(dogs: dogs)
     }
