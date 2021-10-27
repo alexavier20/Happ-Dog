@@ -16,6 +16,7 @@ protocol HomeInteracting: AnyObject {
     func getAllDogs() -> [Dog]
     func clearDogs()
     func fetchDetails(dog: Dog)
+    func saveDogsLocalStorage(dog: Dog, key: String)
 }
 
 final class HomeInteractor {
@@ -30,6 +31,11 @@ final class HomeInteractor {
 }
 
 extension HomeInteractor: HomeInteracting {
+    func saveDogsLocalStorage(dog: Dog, key: String) {
+        let localStorage: LocalStorageManager = LocalStorageManager()
+        localStorage.saveDogs(dog: dog, key: key)
+    }
+    
     func fetchDetails(dog: Dog) {
         presenter.presentDetails(dog: dog)
     }

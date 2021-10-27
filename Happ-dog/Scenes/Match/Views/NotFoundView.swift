@@ -1,5 +1,5 @@
 //
-//  NoLikesView.swift
+//  NotFoundView.swift
 //  Happ-dog
 //
 //  Created by Alex Xavier on 21/10/21.
@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-final class NoLikesView: UIView {
+final class NotFoundView: UIView {
     
     private lazy var noLikesLabel: UILabel = .textLabel(
-        text: "New likes will appear here.",
+        text: "",
         size: 17,
         weight: .medium,
         textColor: UIColor(named: "label-info") ?? .systemRed,
@@ -47,6 +47,10 @@ final class NoLikesView: UIView {
         ])
     }
     
+    func loadNotfound(message: String) {
+        noLikesLabel.text = message
+    }
+    
     @objc func addPulse(){
         let pulse = Pulsing(numberOfPulses: 1, radius: 110, position: searchImageView.center)
         pulse.animationDuration = 0.8
@@ -65,7 +69,7 @@ final class NoLikesView: UIView {
     required init?(coder: NSCoder) { nil }
 }
 
-extension NoLikesView: ViewLayout {
+extension NotFoundView: ViewLayout {
     func configureView() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.addPulse))
         tapGestureRecognizer.numberOfTapsRequired = 1

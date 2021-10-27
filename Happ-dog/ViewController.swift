@@ -13,20 +13,23 @@ class ViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let homeVC = HomeFactory.make()
-        let matchVC = MatchViewController()
-        let searchVC = SearchViewController()
+        
+        let homeVC = UINavigationController(rootViewController: HomeFactory.make())
+        let matchVC = UINavigationController(rootViewController: MatchFactory.make())
+        //let searchVC = UINavigationController(rootViewController: SearchFactory.make())
         
         homeVC.title = "Home"
         matchVC.title = "Match"
-        searchVC.title = "Search"
+        //searchVC.title = "Search"
         
         homeVC.tabBarItem.image = UIImage(named: "homeLogo")
         matchVC.tabBarItem.image = UIImage(named: "matchLogo")
-        searchVC.tabBarItem.image = UIImage(named: "searchLogo")
+        //searchVC.tabBarItem.image = UIImage(named: "searchLogo")
         
-        self.setViewControllers([homeVC, matchVC, searchVC], animated: false)
+        self.setViewControllers([homeVC, matchVC], animated: true)
         self.tabBar.tintColor = .systemRed
+        
+        navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
     }
 }
 

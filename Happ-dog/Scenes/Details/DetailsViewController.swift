@@ -46,10 +46,6 @@ final class DetailsViewController: UIViewController {
             detailsContentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             detailsContentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             detailsContentView.widthAnchor.constraint(equalTo: view.widthAnchor) // THE TRICK
-//            detailsContentView.topAnchor.constraint(equalTo: dogImageView.bottomAnchor, constant: 16),
-            //detailsContentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            //detailsContentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            //detailsContentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 0)
         ])
     }
     
@@ -74,21 +70,17 @@ extension DetailsViewController: DetailsDisplaying {
 
 extension DetailsViewController: ViewLayout {
     func configureView() {
-        view.backgroundColor = .white
-        
+        view.backgroundColor = .white        
     }
     
     func configureHierarchy() {
         view.addSubview(scrollView)
-//        scrollView.addSubview(dogImageView)
         scrollView.addSubview(detailsContentView)
     }
     
     func configureConstraints() {
         configureScrollViewConstraints()
-//        configureDogImageViewConstraints()
         configureContentDetailsViewConstraints()
-        
     }
     
 }

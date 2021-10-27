@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+enum MatchFactory {
+    static func make() -> MatchViewController {
+        var coordinator: MatchCoordinating = MatchCoordinator()
+        let presenter: MatchPresenting = MatchPresenter(coordinator: coordinator)
+        let interactor: MatchInteracting = MatchInteractor(presenter: presenter)
+        let viewController = MatchViewController(interactor: interactor)
+        
+        presenter.viewController = viewController
+        coordinator.viewController = viewController
+        
+        return viewController
+    }
+}

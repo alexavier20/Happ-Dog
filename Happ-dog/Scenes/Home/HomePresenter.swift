@@ -41,7 +41,7 @@ extension HomePresenter: HomePresenting {
     }
     
     func presentError() {
-        
+        viewController?.displayError()
     }
     
     func presentLoading(shouldPresent: Bool) {

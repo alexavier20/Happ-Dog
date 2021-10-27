@@ -12,6 +12,8 @@ import Koloda
 
 protocol HomeDisplaying: AnyObject {
     func loadHome(dogs: [Dog])
+    func displayError()
+    func hideError()
 }
 
 private var numberOfCards: Int = 5
@@ -19,11 +21,16 @@ private var numberOfCards: Int = 5
 final class HomeViewController: UIViewController {
     private let interactor: HomeInteracting
     
+    private lazy var errorView: UIView = {
+        let view: UIView = ErrorView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     lazy var kolodaView: KolodaView = {
         let koloda = KolodaView()
         koloda.translatesAutoresizingMaskIntoConstraints = false
         koloda.countOfVisibleCards = 1
-        
         return koloda
     }()
     
@@ -49,6 +56,15 @@ final class HomeViewController: UIViewController {
             buttonView.topAnchor.constraint(equalTo: kolodaView.bottomAnchor, constant: 16),
             buttonView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.95),
             buttonView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+    }
+    
+    func ErrorViewConstraints() {
+        NSLayoutConstraint.activate([
+            errorView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            errorView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            errorView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            errorView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
         ])
     }
     
@@ -84,15 +100,13 @@ extension HomeViewController: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection)
     {
-        //let dog: Dog = interactor.getDog(index: index)
+        let dog: Dog = interactor.getDog(index: index)
         
         if direction == .left {
-          //...
-          print ("swipe left")
+            self.interactor.saveDogsLocalStorage(dog: dog, key: "memoryDisMatchDogs")
         }
-        if direction == .right {
-          //...
-          print("swipe right")
+        if direction == .right {          
+            self.interactor.saveDogsLocalStorage(dog: dog, key: "memoryMatchDogs")
         }
     }
 }
@@ -124,6 +138,19 @@ extension HomeViewController: KolodaViewDataSource {
 }
 
 extension HomeViewController: HomeDisplaying {
+    func displayError() {
+        view.addSubview(errorView)
+        view.bringSubviewToFront(errorView)
+        errorView.isHidden = false
+        
+        ErrorViewConstraints()
+    }
+    
+    func hideError() {
+        errorView.isHidden = true
+        errorView.removeFromSuperview()
+    }
+    
     func loadHome(dogs: [Dog]) {
         kolodaView.reloadData()
         buttonView.loadKolodaview(koloda: kolodaView)
@@ -132,6 +159,7 @@ extension HomeViewController: HomeDisplaying {
 
 extension HomeViewController: ViewLayout {
     func configureView() {
+        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
     }
     

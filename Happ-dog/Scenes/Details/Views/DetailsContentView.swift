@@ -10,11 +10,8 @@ import Foundation
 import UIKit
 
 final class DetailsContentView: UIView {
-    
-    // MARK: - Properties
-    
     private lazy var dogImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -42,7 +39,7 @@ final class DetailsContentView: UIView {
     private lazy var BoxInfoView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.borderWidth = 0.4
+        view.layer.borderWidth = 0.3
         view.layer.borderColor = UIColor(named: "label-info")?.cgColor
         return view
     }()
@@ -148,8 +145,44 @@ final class DetailsContentView: UIView {
         adjustToFit: false
     )
     
-    // MARK: - Constraints
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        buildLayout()
+    }
     
+    @available(*, unavailable)
+    required init?(coder: NSCoder) { nil }
+    
+    func loadDetailsContent(dog: Dog) {
+        if let url = URL(string: dog.image.url) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let dataImage = data, let image = UIImage(data: dataImage) else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    let size = ImageUtil().getRatioSize(image: image, frame: self.dogImageView.frame)
+                    let scaleImage = ImageUtil().resizeImage(image: image, targetSize: size)
+                    
+                    self.dogImageView.image = scaleImage
+                    
+                    NSLayoutConstraint.activate([
+                        self.dogImageView.heightAnchor.constraint(equalToConstant: size.height),
+                        self.dogImageView.widthAnchor.constraint(equalToConstant: size.width)
+                    ])
+                }
+            }.resume()
+        }
+        nameLabel.text = dog.name
+        temperamentLabel.text = dog.temperament != nil ? dog.temperament : "Uninformed"
+        weightLabel.text = dog.weight?.metric != nil ? dog.weight?.metric : "NaN"
+        HeightLabel.text = dog.height?.metric != nil ? dog.height?.metric : "NaN"
+        lifeSpanLabel.text = dog.lifeSpan != nil ? dog.lifeSpan : "NaN"
+        bredForLabel.text = dog.bredFor != nil ? dog.bredFor : "Uninformed"
+        breedGroupLabel.text = dog.breedGroup != nil ? dog.breedGroup : "Uninformed"
+    }
+}
+
+private extension DetailsContentView {
     func configureDogImageViewConstraints() {
         NSLayoutConstraint.activate([
             dogImageView.topAnchor.constraint(equalTo: topAnchor),
@@ -255,80 +288,8 @@ final class DetailsContentView: UIView {
             breedGroupLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             breedGroupLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        buildLayout()
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) { nil }
-    
-    func loadDetailsContent(dog: Dog) {
-        if let url = URL(string: dog.image.url) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let dataImage = data, let image = UIImage(data: dataImage) else {
-                    return
-                }
-                DispatchQueue.main.async {
-                    let size = self.getRatioSize(image: image)
-                    let scaleImage = self.resizeImage(image: image, targetSize: size)
-                    
-                    self.dogImageView.image = scaleImage
-                    
-                    NSLayoutConstraint.activate([
-                        self.dogImageView.heightAnchor.constraint(equalToConstant: size.height),
-                        self.dogImageView.widthAnchor.constraint(equalToConstant: size.width)
-                    ])
-                }
-            }.resume()
-        }
-        nameLabel.text = dog.name
-        temperamentLabel.text = dog.temperament != nil ? dog.temperament : "Uninformed"
-        weightLabel.text = dog.weight?.metric != nil ? dog.weight?.metric : "NaN"
-        HeightLabel.text = dog.height?.metric != nil ? dog.height?.metric : "NaN"
-        lifeSpanLabel.text = dog.lifeSpan != nil ? dog.lifeSpan : "NaN"
-        bredForLabel.text = dog.bredFor != nil ? dog.bredFor : "Uninformed"
-        breedGroupLabel.text = dog.breedGroup != nil ? dog.breedGroup : "Uninformed"
-    }
-    
-    func getRatioSize(image: UIImage) -> CGSize {
-        let myImageWidth = image.size.width
-        let myImageHeight = image.size.height
-        let myViewWidth = frame.size.width
-        
-        let ratio = myViewWidth / myImageWidth
-        let scaledHeight = myImageHeight * ratio
-        
-        return CGSize(width: myViewWidth, height: scaledHeight)
-    }
-    
-    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
-        let size = image.size
-        
-        let widthRatio  = targetSize.width  / size.width
-        let heightRatio = targetSize.height / size.height
-        
-        var newSize: CGSize
-        if(widthRatio > heightRatio) {
-            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
-        } else {
-            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
-        }
-        
-        let rect = CGRect(origin: .zero, size: newSize)
-        
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.draw(in: rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage
-    }
+    }  
 }
-
-// MARK: - ViewLayout
 
 extension DetailsContentView: ViewLayout {
     func configureView() {
